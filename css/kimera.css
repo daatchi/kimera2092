@@ -182,8 +182,7 @@ html, body {
 
 /* ── COVER ART (LEFT) ── */
 .k-cover-col {
-  position: sticky;
-  top: 80px;
+  position: static;
 }
 
 .k-cover-label {
@@ -556,4 +555,117 @@ html, body {
 
 .k-trailer-channel:hover {
   color: var(--k-text);
+}
+
+/* ── NEW v13: CAST MYSTERY (hero) ── */
+.k-cast-row { flex-wrap: wrap; }
+.k-cast-img-wrap { position: relative; }
+.k-cast-mystery { border-color: rgba(200,169,110,0.4); }
+.k-cast-veil {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  color: var(--k-gold);
+  font-weight: 700;
+  backdrop-filter: blur(1px);
+  border-radius: 50%;
+}
+.k-cast-tba {
+  font-size: 0.52rem;
+  letter-spacing: 0.12em;
+  color: var(--k-gold-dim);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* ── NEW v13: SOURCE BOOK ── */
+.k-book-note {
+  margin-top: 0.8rem;
+  font-size: 0.65rem;
+  line-height: 1.8;
+  color: var(--k-muted);
+  letter-spacing: 0.06em;
+  border-left: 2px solid var(--k-border);
+  padding-left: 0.8rem;
+}
+.k-book-note em { color: var(--k-gold); font-style: italic; }
+.k-book-note span { font-size: 0.58rem; color: var(--k-gold-dim); letter-spacing: 0.1em; }
+
+/* ── NEW v13: FULL CAST SECTION ── */
+.k-full-cast {
+  margin-top: 2.5rem;
+  border-top: 1px solid var(--k-border);
+  padding-top: 1.8rem;
+}
+.k-full-cast-grid { display: flex; flex-direction: column; }
+.k-full-cast-card {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(200,169,110,0.08);
+  transition: background 0.2s;
+}
+.k-full-cast-card:hover { background: rgba(200,169,110,0.04); }
+.k-full-cast-img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid var(--k-border);
+  flex-shrink: 0;
+  position: relative;
+}
+.k-full-cast-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+.k-mystery-img img { filter: brightness(0.3) blur(1px); }
+.k-mystery-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: var(--k-gold);
+  font-weight: 700;
+}
+.k-full-cast-info { display: flex; flex-direction: column; gap: 0.18rem; }
+.k-full-cast-actor {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--k-text);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.k-full-cast-char {
+  font-size: 0.68rem;
+  color: var(--k-gold);
+  font-style: italic;
+  letter-spacing: 0.06em;
+}
+.k-full-cast-desc {
+  font-size: 0.6rem;
+  color: var(--k-muted);
+  letter-spacing: 0.04em;
+  font-weight: 300;
+}
+.k-tba-badge {
+  font-size: 0.52rem;
+  letter-spacing: 0.12em;
+  background: rgba(200,169,110,0.15);
+  color: var(--k-gold);
+  border: 1px solid var(--k-border);
+  padding: 0.1rem 0.4rem;
+  font-style: normal;
+  font-weight: 600;
 }
